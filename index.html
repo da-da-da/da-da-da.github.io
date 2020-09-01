@@ -251,6 +251,204 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/02/xml%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zong dengdeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HAVE FUN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/02/xml%E5%AD%A6%E4%B9%A0/" itemprop="url">xml学习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-02T00:17:58+08:00">
+                2020-09-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A1%A5%E5%85%85%E5%86%85%E5%AE%B9/" itemprop="url" rel="index">
+                    <span itemprop="name">补充内容</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="XML-可扩展标记语言"><a href="#XML-可扩展标记语言" class="headerlink" title="XML-可扩展标记语言"></a>XML-可扩展标记语言</h3><p>数据表示格式，描述非常复杂的数据格式，常用于传输和存储数据，文件为.xml</p>
+<p>特点： 1. 纯文本，默认UTF-8 2. 可嵌套，适合结构化数据</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">note</span> <span class="meta-keyword">SYSTEM</span> <span class="meta-string">"book.dtd"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">book</span> <span class="attr">id</span>=<span class="string">"1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Java核心技术<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">author</span>&gt;</span>Cay S. Horstmann<span class="tag">&lt;/<span class="name">author</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">isbn</span> <span class="attr">lang</span>=<span class="string">"CN"</span>&gt;</span>1234567<span class="tag">&lt;/<span class="name">isbn</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tags</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span>&gt;</span>Java<span class="tag">&lt;/<span class="name">tag</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span>&gt;</span>Network<span class="tag">&lt;/<span class="name">tag</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tags</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pubDate</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>固定格式</strong></p>
+<ul>
+<li><p>首行<code>&lt;?xml version=&quot;1.0&quot;?&gt;</code> </p>
+</li>
+<li><p>如果以类似<code>&lt;!DOCTYPE note SYSTEM &quot;book.dtd&quot;&gt;</code>声明的是文档定义类型（DTD：Document Type Definition），DTD是可选的。</p>
+<p>DTD（文档类型定义）的作用是定义 XML 文档的合法构建模块。</p>
+<p>DTD 可被成行地声明于 XML 文档中，也可作为一个外部引用。</p>
+</li>
+<li><p>一个XML文档有且仅有一个根元素，根元素可以包含任意个子元素，元素可以包含属性，例如，<code>&lt;isbn lang=&quot;CN&quot;&gt;1234567&lt;/isbn&gt;</code>包含一个属性<code>lang=&quot;CN&quot;</code>，且元素必须正确嵌套。如果是空元素，可以用<code>&lt;tag/&gt;</code>表示。</p>
+</li>
+</ul>
+<p>由于使用了<code>&lt;</code>、<code>&gt;</code>以及引号等标识符，如果内容出现了特殊符号，需要使用<code>&amp;???;</code>表示转义。例如，<code>Java&lt;tm&gt;</code>必须写成：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>Java<span class="symbol">&amp;lt;</span>tm<span class="symbol">&amp;gt;</span><span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">字符</th>
+<th align="left">表示</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;</td>
+<td align="left">&lt;</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">&gt;</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">&amp;</td>
+</tr>
+<tr>
+<td align="left">“</td>
+<td align="left">&quot;</td>
+</tr>
+<tr>
+<td align="left">‘</td>
+<td align="left"><code>&amp;apos;</code></td>
+</tr>
+</tbody></table>
+<p>格式正确的XML（Well Formed）是指XML的格式是正确的，可以被解析器正常读取。而合法的XML是指，不但XML格式正确，而且它的数据结构可以被DTD或者XSD验证。</p>
+<h2 id="为什么使用-DTD？"><a href="#为什么使用-DTD？" class="headerlink" title="为什么使用 DTD？"></a>为什么使用 DTD？</h2><p>通过 DTD，您的每一个 XML 文件均可携带一个有关其自身格式的描述。</p>
+<p>通过 DTD，独立的团体可一致地使用某个标准的 DTD 来交换数据。</p>
+<p>而您的应用程序也可使用某个标准的 DTD 来验证从外部接收到的数据。</p>
+<p>您还可以使用 DTD 来验证您自身的数据。</p>
+<p>当引用的DTD文档在本地时，采用如下方式： <!DOCTYPE 根元素 SYSTEM “DTD文档路径”> 如：<!DOCTYPE 书架 SYSTEM “book.dtd”></p>
+<p>当引用的DTD文档在公共网络上时，采用如下方式： <!DOCTYPE 根元素 PUBLIC “DTD名称" “DTD文档的URL"> 如：<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd"></p>
+<hr>
+<p>xmlns是xml namespace的缩写</p>
+<p><strong><em>\</em>用来标识命名空间的网络地址并不被XML解析器调用，XML解析器不需要从这个网络地址中查找信息，该网络地址的作用仅仅是给命名空间一个唯一的名字，因此这个网络地址也可以是虚拟的。**</strong></p>
+<p>  <strong><em>\</em>那么对于浏览器来说，如何知道&lt;a:table…&gt;应该是哪个dtd文件中的标志呢？个人理解应该是在每个xml的dtd文件中都会规定xmlns这个值，如果dtd文件中的xmlns的值与xhtml中的值相等，则认为是匹配的。**</strong></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/09/confusion/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1106,7 +1304,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1117,7 +1315,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1128,7 +1326,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
